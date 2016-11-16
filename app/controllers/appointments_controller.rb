@@ -2,7 +2,7 @@ class AppointmentsController < ApplicationController
 
   def new
     @doctors = Doctor.all.map { |d| [d.name, d.id] }
-    @patients = Patient.all.map { |pa| [pa.name, pa.id] }
+    @patients = Patient.all.map { |p| [p.name, p.id] }
     @appointment = Appointment.new
   end
 
@@ -18,7 +18,7 @@ class AppointmentsController < ApplicationController
 
   def destroy
     appointment = Appointment.find(params[:id])
-    appintment.destroy
+    appointment.destroy
     flash[:success] = 'Deleted'
     redirect_to doctor_path(appointment.doctor_id)
   end
