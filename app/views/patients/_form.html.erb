@@ -1,0 +1,9 @@
+<%= form_for @patient do |f| %>
+
+  <%= f.label :name %>
+  <%= f.text_field :name, required: true %>
+
+  <div class='center'>
+    <%= f.submit nil, class:'btn grey lighten-2 black-text' %>
+  </div>
+<% end %>

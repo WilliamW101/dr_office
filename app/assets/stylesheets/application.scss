@@ -1,0 +1,16 @@
+@import 'materialize';
+
+body {
+  background-color: black;
+  color: white;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #bdbdbd;
+  text-decoration: line-through;
+}

@@ -1,0 +1,17 @@
+<h1 class='center'> <%= @doctor.name %> </h1>
+<h5 class='center'> Specality: <%= @doctor.specality %> </h5>
+<br />
+
+<% if @doctor.patients.any? %>
+  <h5> <u> Patients </u> </h5>
+    <ul>
+      <% @doctor.appointments.each do |appointment| %>
+        <li>
+          <%= appointment.patient.name %> - <%= appointment.time %> -
+          <%= link_to 'Remove', appointment_path(appointment), medthod: :delete, data: { confirm: 'Really Delete?' } %>
+        </li>
+      <% end %>
+    </ul>
+  <% else %>
+    <h5> No Patients Found </h5>
+  <% end %>
