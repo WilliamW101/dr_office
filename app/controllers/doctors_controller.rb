@@ -15,7 +15,7 @@ class DoctorsController < ApplicationController
   def create
     @doctor = Doctor.new(doctor_params)
     if @doctor.save
-      redirect_to @doctor, success: 'Doctor Successfully Created!'
+      redirect_to doctors_path, success: 'Doctor Successfully Created!'
     else
       render :new, error: 'Something Went Wrong!'
     end

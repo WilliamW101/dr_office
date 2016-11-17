@@ -17,10 +17,10 @@ class AppointmentsController < ApplicationController
   end
 
   def destroy
-    appointment = Appointment.find(params[:id])
-    appointment.destroy
+    @appointment = Appointment.find(params[:id])
+    @appointment.destroy
     flash[:success] = 'Deleted'
-    redirect_to doctor_path(appointment.doctor_id)
+    redirect_to doctor_path(@appointment.doctor_id)
   end
 
   private
