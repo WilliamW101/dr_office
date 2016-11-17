@@ -19,6 +19,9 @@ gem 'jquery-rails'
 gem 'jbuilder', '~> 2.5'
 # styling
 gem 'materialize-sass', '~> 0.97.8'
+# user auth
+gem 'devise', '~> 4.2.0'
+
 
 group :development, :test do
   # Call 'binding.pry' anywhere in the code to stop execution and get a debugger console
